@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Church of Christ Inc. | Christ Mission, My Passion.</title>
+  <meta name="description" content="Community Church of Christ Inc. builds Christ-centered communities through worship, discipleship, church planting, study-work formation, theology, technical training, feeding programs, riders outreach, jail ministry, and rehabilitation support." />
+  <meta name="keywords" content="Community Church of Christ, COCSTC, COCSTC Academy, Cavite church, study work program, theology, TESDA, karate, ROTC, feeding ministry, riders ministry, rehabilitation ministry" />
+  <meta name="author" content="Community Church of Christ Inc." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Community Church of Christ Inc. | Christ Mission, My Passion." />
+  <meta property="og:description" content="A Christ-centered, community-serving ministry ecosystem for worship, discipleship, education, training, and outreach." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="church-logo-transparent.png" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fafc;
+      --bg-soft:#eef5ff;
+      --card:#ffffff;
+      --ink:#16324f;
+      --muted:#5d7188;
+      --line:#d9e4ef;
+      --primary:#2c67c9;
+      --primary-dark:#1d4d9c;
+      --accent:#d8a834;
+      --accent-soft:#fff4d6;
+      --success:#1f8b5f;
+      --shadow:0 12px 36px rgba(17, 48, 86, 0.12);
+      --radius:24px;
+      --radius-sm:18px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(44,103,201,.08), transparent 28%),
+        radial-gradient(circle at top right, rgba(216,168,52,.12), transparent 25%),
+        linear-gradient(180deg,#f9fcff 0%, #f5f9fd 40%, #ffffff 100%);
+      line-height:1.65;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(calc(100% - 32px), var(--max)); margin-inline:auto}
+    .section{padding:72px 0}
+    .section.compact{padding:50px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;
+      background:var(--accent-soft);color:#7b5a10;font-weight:700;font-size:.82rem;letter-spacing:.03em;text-transform:uppercase
+    }
+    .eyebrow::before{content:"✦";font-size:.85rem}
+    h1,h2,h3{line-height:1.1;margin:0 0 14px}
+    h1{font-size:clamp(2.4rem,5vw,4.5rem);font-weight:800;letter-spacing:-.04em}
+    h2{font-size:clamp(1.85rem,3.4vw,3rem);font-weight:800;letter-spacing:-.03em}
+    h3{font-size:1.2rem;font-weight:800}
+    .serif{font-family:'Playfair Display', serif}
+    .lead{font-size:1.06rem;color:var(--muted);max-width:700px}
+    .muted{color:var(--muted)}
+    .btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:28px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:14px 22px;border-radius:999px;font-weight:700;transition:.22s ease;
+      border:1px solid transparent; min-height:50px;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;box-shadow:0 16px 28px rgba(44,103,201,.25)}
+    .btn.secondary{background:#fff;border-color:var(--line);color:var(--ink)}
+    .btn.whatsapp{background:#e8fff4;color:#0a6d48;border-color:#b9f0d5}
+    .topbar{
+      position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);
+      background:rgba(255,255,255,.84);border-bottom:1px solid rgba(217,228,239,.8)
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:14px;min-width:0}
+    .brand-mark{
+      width:58px;height:58px;border-radius:18px;background:linear-gradient(180deg,#fff,#eef5ff);
+      box-shadow:0 10px 28px rgba(22,50,79,.14);display:grid;place-items:center;border:1px solid rgba(44,103,201,.10);
+      padding:7px;flex:0 0 auto
+    }
+    .brand-mark img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.12))}
+    .brand-copy{min-width:0}
+    .brand-copy strong{display:block;font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .brand-copy span{display:block;font-size:.78rem;color:var(--muted)}
+    .nav-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{font-size:.95rem;color:#39506d;font-weight:600;padding:8px 10px;border-radius:999px}
+    .nav-links a.active,.nav-links a:hover{background:#eef5ff;color:var(--primary-dark)}
+
+    .hero{padding:52px 0 22px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .hero-copy{padding:14px 0}
+    .hero-copy .subline{font-size:1.1rem;font-weight:700;color:#23496e;margin-bottom:12px}
+    .hero-card{
+      position:relative;background:linear-gradient(180deg,#ffffff 0%, #f2f7ff 100%);border:1px solid var(--line);
+      border-radius:30px;box-shadow:var(--shadow);padding:28px;overflow:hidden
+    }
+    .hero-card::after{
+      content:"";position:absolute;inset:auto -80px -90px auto;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle, rgba(216,168,52,.18), transparent 70%)
+    }
+    .logo-stack{display:flex;align-items:center;gap:18px;margin-bottom:22px;flex-wrap:wrap}
+    .church-logo-wrap{
+      width:min(220px,50vw);aspect-ratio:1/1;display:grid;place-items:center;border-radius:28px;
+      background:radial-gradient(circle at top, #ffffff 0%, #f7fbff 55%, #eef5ff 100%);
+      border:1px solid rgba(44,103,201,.14);box-shadow:0 24px 44px rgba(20,46,84,.18);padding:18px
+    }
+    .church-logo-wrap img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 24px rgba(0,0,0,.18))}
+    .mini-logo{width:88px;height:88px;border-radius:22px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;padding:10px;box-shadow:0 10px 22px rgba(17,48,86,.1)}
+    .hero-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .chip-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 10px 22px rgba(17,48,86,.06)}
+    .chip-card strong{display:block;font-size:1.5rem;color:var(--primary-dark)}
+    .chip-card span{font-size:.92rem;color:var(--muted)}
+
+    .photo-collage{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .photo-collage figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 26px rgba(17,48,86,.08)}
+    .photo-collage img{height:100%;width:100%;object-fit:cover}
+    .photo-collage figure.tall{grid-row:span 2;min-height:510px}
+    .photo-collage figure.short{min-height:248px}
+    .photo-collage figcaption{padding:12px 14px;font-size:.88rem;color:var(--muted);background:#fff}
+
+    .verse-band{padding:24px 0}
+    .verse-box{background:linear-gradient(135deg,#1d4d9c,#2c67c9);color:#fff;border-radius:26px;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;box-shadow:0 18px 32px rgba(29,77,156,.22)}
+    .verse-box p{margin:0;max-width:760px;font-size:1rem}
+    .verse-box strong{display:block;font-size:1.1rem;margin-bottom:6px}
+
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 14px 28px rgba(17,48,86,.06)}
+    .intro-card{padding:26px}
+
+    .ministry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+    .ministry-card{overflow:hidden;display:flex;flex-direction:column;position:relative;transition:transform .28s ease, box-shadow .28s ease}
+    .ministry-card:hover{transform:translateY(-8px);box-shadow:0 24px 44px rgba(17,48,86,.14)}
+    .ministry-media{position:relative;overflow:hidden;aspect-ratio:1.18/1;background:#dfeaf7}
+    .ministry-media img{width:100%;height:100%;object-fit:cover;transition:transform .65s ease, filter .4s ease}
+    .ministry-card:hover .ministry-media img{transform:scale(1.06);filter:saturate(1.03)}
+    .ministry-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,21,39,.02) 10%, rgba(9,24,44,.18) 52%, rgba(8,22,42,.82) 100%)}
+    .ministry-titlebar{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;background:linear-gradient(135deg,rgba(29,77,156,.96),rgba(44,103,201,.9));color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 18px 30px rgba(8,24,45,.28);border-radius:18px;padding:14px 16px}
+    .ministry-titlebar h3{margin:0 0 6px;font-size:1.12rem;color:#fff}
+    .ministry-titlebar p{margin:0;color:rgba(255,255,255,.84);font-size:.9rem;line-height:1.45}
+    .ministry-content{padding:18px 20px 20px}
+    .ministry-content p{margin:0 0 16px;color:var(--muted);font-size:.95rem}
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .tag{padding:7px 10px;border-radius:999px;background:#eef5ff;color:var(--primary-dark);font-size:.78rem;font-weight:700}
+    .mini-actions{display:flex;gap:10px;flex-wrap:wrap}
+    .link-btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--primary-dark);background:#f5f9ff;padding:10px 14px;border-radius:999px;border:1px solid #dce8f7;cursor:pointer;transition:.2s ease}
+    .link-btn:hover{background:#eaf3ff;border-color:#cfe0f5}
+    .ministry-note{font-size:.92rem}
+    .section-glow{position:relative}
+    .section-glow::before{content:"";position:absolute;inset:auto auto -40px -40px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle, rgba(216,168,52,.16), transparent 70%);pointer-events:none}
+    .carousel-dots{display:flex;justify-content:center;gap:8px;margin-top:20px}
+    .carousel-dots button{width:10px;height:10px;border-radius:50%;border:0;background:#c7d7ea;padding:0;cursor:pointer;transition:.2s ease}
+    .carousel-dots button.active{background:var(--primary)}
+
+    .values{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}
+    .value{padding:22px}
+    .value .icon{width:52px;height:52px;border-radius:16px;background:#eef5ff;display:grid;place-items:center;font-size:1.3rem;color:var(--primary-dark);margin-bottom:14px}
+    .value p{margin:0;color:var(--muted)}
+
+    .ecosystem-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:14px;margin-bottom:24px}
+    .logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .logo-card{padding:18px;display:grid;place-items:center;text-align:center;min-height:150px}
+    .logo-card img{max-height:74px;object-fit:contain;margin-bottom:12px}
+    .logo-card span{font-size:.9rem;color:var(--muted);font-weight:700}
+
+    .story-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:22px;align-items:stretch}
+    .story-panel{padding:26px}
+    .story-media{overflow:hidden}
+    .story-media img{width:100%;height:100%;object-fit:cover;min-height:100%}
+    .checklist{display:grid;gap:12px;margin-top:18px}
+    .check{display:flex;gap:12px;align-items:flex-start}
+    .check b{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e8fff4;color:var(--success);flex:0 0 auto}
+
+    .form-shell{padding:18px;background:linear-gradient(180deg,#ffffff,#f8fbff)}
+    .form-frame{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 18px 34px rgba(17,48,86,.08)}
+    .form-frame iframe{display:block;width:100%;min-height:5580px;border:0}
+    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start}
+    .contact-card{padding:26px}
+    .contact-list{display:grid;gap:12px;margin-top:18px}
+    .contact-item{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed #dce5ef}
+    .contact-item:last-child{border-bottom:0}
+    .contact-item b{color:var(--primary-dark)}
+    .map-card{overflow:hidden}
+    .map-card iframe{width:100%;height:100%;min-height:420px;border:0}
+
+    footer{padding:26px 0 40px;color:var(--muted)}
+    .footer-box{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center;padding-top:18px;border-top:1px solid var(--line)}
+
+    .modal{position:fixed;inset:0;background:rgba(10,24,42,.56);display:none;place-items:center;padding:18px;z-index:100}
+    .modal.open{display:grid}
+    .modal-panel{width:min(960px,100%);max-height:min(88vh,900px);overflow:auto;background:#fff;border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.28)}
+    .modal-top{padding:24px 24px 8px;display:flex;justify-content:space-between;gap:16px;align-items:start}
+    .close{border:0;background:#eef5ff;color:var(--primary-dark);width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer}
+    .modal-body{padding:0 24px 24px}
+    .modal-gallery{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:start}
+    .modal-gallery img{border-radius:22px;border:1px solid var(--line);width:100%;height:100%;object-fit:cover;max-height:420px}
+    .caption-list{display:grid;gap:12px}
+    .caption{background:#f8fbff;border:1px solid #e1eaf4;border-radius:18px;padding:14px}
+    .caption strong{display:block;color:var(--primary-dark);margin-bottom:6px}
+
+    .fade-up{opacity:0;transform:translateY(18px);transition:.55s ease}
+    .fade-up.in{opacity:1;transform:none}
+
+    @media (max-width: 1100px){
+      .hero-grid,.story-grid,.contact-grid,.grid-2,.modal-gallery{grid-template-columns:1fr}
+      .values{grid-template-columns:repeat(2,1fr)}
+      .ministry-grid{grid-template-columns:repeat(2,1fr)}
+      .logo-grid{grid-template-columns:repeat(3,1fr)}
+      .photo-collage figure.tall{min-height:400px}
+    }
+    @media (max-width: 760px){
+      .section{padding:66px 0}
+      .nav{align-items:flex-start}
+      .nav-links{display:none}
+      .hero{padding-top:34px}
+      .hero-highlights,.values,.logo-grid{grid-template-columns:1fr}
+      .ministry-grid{display:grid;grid-auto-flow:column;grid-auto-columns:86%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}
+      .ministry-card{scroll-snap-align:start}
+      .carousel-dots{display:flex}
+      .photo-collage{grid-template-columns:1fr}
+      .photo-collage figure.tall,.photo-collage figure.short{min-height:auto}
+      .verse-box{padding:20px;flex-direction:column;align-items:flex-start}
+      .church-logo-wrap{width:100%;max-width:220px}
+      .brand-copy strong{white-space:normal}
+      .form-frame iframe{min-height:5580px}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Community Church of Christ Home">
+        <div class="brand-mark"><img src="church-logo-transparent.png" alt="Community Church of Christ logo" onerror="this.onerror=null;this.src='Church logo.png'" /></div>
+        <div class="brand-copy">
+          <strong>Community Church of Christ Inc.</strong>
+          <span>Romans 16:16 · Christ Mission, My Passion.</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#home">Home</a>
+        <a href="#ministries">Ministries</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#partners">Partners</a>
+        <a href="#inquiry">Inquiry</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy fade-up">
+          <span class="eyebrow">Christ-centered service and formation</span>
+          <div class="subline serif">A living ministry of worship, compassion, discipleship, and Christ-like service.</div>
+          <h1>Build lives, shape leaders, and serve communities with a Christ-like heart.</h1>
+          <p class="lead">Community Church of Christ Inc. brings together worship, discipleship, academy formation, technical skills training, study-work opportunity, Christian service, and mission outreach so people can grow spiritually, personally, and professionally.</p>
+          <div class="btns">
+            <a class="btn primary" href="#inquiry">Apply / Inquire Now</a>
+            <a class="btn secondary" href="#ministries">Explore Ministries</a>
+            <a class="btn whatsapp" target="_blank" rel="noopener" href="https://m.me/cocstcai">Open Messenger</a>
+          </div>
+          <div class="hero-highlights">
+            <div class="chip-card"><strong>7</strong><span>core ministries and community pathways</span></div>
+            <div class="chip-card"><strong>2018</strong><span>academy identity supporting formation and service</span></div>
+            <div class="chip-card"><strong>Christ</strong><span>at the center of mission, discipline, and service</span></div>
+          </div>
+        </div>
+        <div class="hero-card fade-up">
+          <div class="logo-stack">
+            <div class="church-logo-wrap"><img src="church-logo-transparent.png" alt="Transparent church logo" onerror="this.onerror=null;this.src='Church logo.png'" /></div>
+            <div>
+              <div class="mini-logo"><img src="COCSTC Academy No Back.png" alt="COCSTC Academy logo" /></div>
+              <div style="height:12px"></div>
+              <div class="mini-logo"><img src="Karate logo.jpg" alt="Ishido Kai logo" /></div>
+            </div>
+          </div>
+          <p class="muted" style="margin:0 0 18px">Professional, compassionate, and mission-driven—designed to welcome students, volunteers, ministry partners, and families into a clean and trustworthy digital front door.</p>
+          <div class="photo-collage">
+            <figure class="tall"><img src="COCSTC Academy.png" alt="COCSTC Academy students and mentors together" /><figcaption>Training godly leaders through academy formation and mentorship.</figcaption></figure>
+            <figure class="short"><img src="Community Church feeding event in action.png" alt="Community feeding ministry in action" /><figcaption>Serving communities through practical care and generosity.</figcaption></figure>
+            <figure class="short"><img src="Christian Riders  ministry (1).png" alt="Christian Riders Ministry ride and fellowship" /><figcaption>Witness, fellowship, and outreach on the road.</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="verse-band compact">
+      <div class="container">
+        <div class="verse-box fade-up">
+          <div>
+            <strong>Christ Mission, My Passion.</strong>
+            <p>We believe ministry should touch the whole person—spirit, mind, skill, discipline, service, and purpose. Every ministry lane on this page is designed to lead people closer to Christ while serving families and communities with dignity.</p>
+          </div>
+          <a class="btn secondary" href="#contact">Visit or Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ministries">
+      <div class="container">
+        <div class="grid-2">
+          <div class="intro-card card fade-up">
+            <span class="eyebrow">Our ministries</span>
+            <h2>One church, many expressions of Christ-like service.</h2>
+            <p class="lead">Each ministry creates a practical way to worship, learn, serve, restore lives, and strengthen communities.</p>
+          </div>
+          <div class="intro-card card fade-up">
+            <h3>Mission directions</h3>
+            <div class="checklist">
+              <div class="check"><b>✓</b><div><strong>Spiritual growth</strong><div class="muted">Bible study, theology, worship, and faithful Christian living.</div></div></div>
+              <div class="check"><b>✓</b><div><strong>Life formation</strong><div class="muted">Discipline, leadership, teamwork, responsibility, and service.</div></div></div>
+              <div class="check"><b>✓</b><div><strong>Community compassion</strong><div class="muted">Feeding, visitation, outreach, prison ministry, and restorative care.</div></div></div>
+            </div>
+          </div>
+        </div>
+
+        
+<div class="ministry-grid section-glow" id="ministryGrid">
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="COCSTC Academy.png" alt="COCSTC Academy formation and student life" />
+              <div class="ministry-titlebar">
+                <h3>COCSTC Academy Inc.</h3>
+                <p>Training godly leaders through theology, technical skills, discipline, and character formation.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Academy</span><span class="tag">Theology</span><span class="tag">TESDA</span></div>
+              <p class="ministry-note">Holistic Christian education with theology, technical-vocational preparation, ROTC-related discipline, and Christ-centered formation.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="academy">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="SWP.png" alt="Study Work Program training, ROTC, theology, and karate" />
+              <div class="ministry-titlebar">
+                <h3>Study Work Program</h3>
+                <p>A 7-in-1 pathway for schooling, work opportunity, ministry exposure, and leadership growth.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">SWP</span><span class="tag">Scholarship</span><span class="tag">Leadership</span></div>
+              <p class="ministry-note">Combines academics, technical certificates, theology formation, work opportunity, service, and leadership development.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="swp">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="Church Planting.png" alt="Church planting ministry gatherings and preaching" />
+              <div class="ministry-titlebar">
+                <h3>Church Planting</h3>
+                <p>Establishing Christ-centered communities through preaching, visitation, and local discipleship.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Mission</span><span class="tag">Church Planting</span></div>
+              <p class="ministry-note">Extending worship and pastoral care in Bongabong, Amadeo, and Bontoc through faithful local mission work.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="planting">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="Feeding Ministry.png" alt="Community feeding ministry outreach" />
+              <div class="ministry-titlebar">
+                <h3>Feeding Ministry</h3>
+                <p>Sharing food, care, and encouragement with families and communities in need.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Compassion</span><span class="tag">Feeding</span></div>
+              <p class="ministry-note">Serving meals and hope through organized outreach that reflects Christian love in practical action.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="feeding">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="Prison (Jail) ministry.png" alt="Prison jail ministry fellowship and visitation" />
+              <div class="ministry-titlebar">
+                <h3>Prison (Jail) Ministry</h3>
+                <p>Bringing hope, prayer, and discipleship to people in correctional spaces.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Hope</span><span class="tag">Prison Ministry</span></div>
+              <p class="ministry-note">Offering spiritual encouragement, practical support, and a reminder that restoration is possible in Christ.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="jail">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="Christian Riders  ministry (1).png" alt="Christian Riders Ministry banner" />
+              <div class="ministry-titlebar">
+                <h3>Christian Riders Ministry</h3>
+                <p>Faith-driven fellowship on the road through rides, outreach, and practical Christian witness.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Outreach</span><span class="tag">Riders Club</span></div>
+              <p class="ministry-note">Gathering riders for charity rides, community visibility, and service-oriented presence across ministry activities.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="riders">View description</button></div>
+            </div>
+          </article>
+
+          <article class="card ministry-card fade-up">
+            <div class="ministry-media">
+              <img src="Rehabilitation Ministry through Spiritual growth sessions.png" alt="Rehabilitation ministry through spiritual growth sessions" />
+              <div class="ministry-titlebar">
+                <h3>Rehabilitation Ministry</h3>
+                <p>Supporting recovery through spiritual growth sessions, accountability, and Christ-centered care.</p>
+              </div>
+            </div>
+            <div class="ministry-content">
+              <div class="tag-row"><span class="tag">Restoration</span><span class="tag">Rehabilitation</span></div>
+              <p class="ministry-note">Helping people move toward healing and renewed purpose through discipleship, structure, and compassionate guidance.</p>
+              <div class="mini-actions"><button class="link-btn" data-modal="rehab">View description</button></div>
+            </div>
+          </article>
+        </div>
+        <div class="carousel-dots" aria-label="Ministry cards">
+          <button class="active" data-scroll-card="0" aria-label="Show first ministries"></button>
+          <button data-scroll-card="3" aria-label="Show middle ministries"></button>
+          <button data-scroll-card="6" aria-label="Show final ministry"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="ecosystem-head fade-up">
+          <div>
+            <span class="eyebrow">Capability and value</span>
+            <h2>Training people for service, livelihood, leadership, and influence.</h2>
+          </div>
+          <p class="lead" style="max-width:520px">Our goal is to equip people with faith, discipline, practical skills, and a servant heart that can bless church, family, and community.</p>
+        </div>
+        <div class="values">
+          <div class="card value fade-up"><div class="icon">✚</div><h3>Theology & discipleship</h3><p>Bible learning, ministry training, and Christ-centered life direction.</p></div>
+          <div class="card value fade-up"><div class="icon">⚙</div><h3>Job-ready skill development</h3><p>TESDA-related pathways, practical training, and confidence for work and service.</p></div>
+          <div class="card value fade-up"><div class="icon">🛡</div><h3>Leadership & discipline</h3><p>ROTC influence, karate, teamwork, responsibility, and resilient character formation.</p></div>
+          <div class="card value fade-up"><div class="icon">🤝</div><h3>Workforce and service pathways</h3><p>Study-work structure, community involvement, and preparation for meaningful opportunity.</p></div>
+        </div>
+
+        <div class="story-grid" style="margin-top:24px">
+          <div class="card story-panel fade-up">
+            <h3>A Christian heart at the center of every program</h3>
+            <p class="muted">Our passion is to help people learn, work, serve, and influence others through a Christ-like spirit. Every program is designed to strengthen faith while opening real pathways for growth.</p>
+            <div class="checklist">
+              <div class="check"><b>♥</b><div><strong>Our goal</strong><div class="muted">Guide students, families, volunteers, and partners with clarity, hope, and practical next steps.</div></div></div>
+              <div class="check"><b>♥</b><div><strong>Our aim</strong><div class="muted">Create a simple inquiry journey supported by Messenger follow-up and real contact details.</div></div></div>
+              <div class="check"><b>♥</b><div><strong>Our passion</strong><div class="muted">Reflect faith, compassion, discipline, and service through real ministry stories and visuals.</div></div></div>
+            </div>
+          </div>
+          <figure class="card story-media fade-up">
+            <img src="COCSTC Academy.png" alt="COCSTC Academy students and mentors" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="partners">
+      <div class="container">
+        <div class="ecosystem-head fade-up">
+          <div>
+            <span class="eyebrow">Trusted ministry and training ecosystem</span>
+            <h2>Partners and coordination network</h2>
+          </div>
+          <p class="lead" style="max-width:580px">Working with church, civic, training, and service partners helps widen the impact of ministry, formation, and community development.</p>
+        </div>
+        <div class="logo-grid">
+          <div class="card logo-card fade-up"><img src="Philippine Red Cross.PNG" alt="Philippine Red Cross logo" /><span>Philippine Red Cross</span></div>
+          <div class="card logo-card fade-up"><img src="TESDA logo.jpg" alt="TESDA logo" /><span>TESDA</span></div>
+          <div class="card logo-card fade-up"><img src="402nd CDC 4RCDG Reservist logo.jfif" alt="402nd CDC 4RCDG logo" /><span>402nd CDC 4RCDG</span></div>
+          <div class="card logo-card fade-up"><img src="Piedmont College of Theology International Logo.png" alt="Piedmont College of Theology International logo" /><span>PCTI</span></div>
+        </div>
+        <div class="card story-panel fade-up" style="margin-top:22px">
+          <h3>Also coordinating with</h3>
+          <p class="muted" style="margin:0">Local government units from barangay to city and national offices, non-government institutions, theology and training partners, and aligned service agencies that support ministry, community safety, rehabilitation, and development.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inquiry">
+      <div class="container">
+        <div class="grid-2">
+          <div class="card story-panel fade-up">
+            <span class="eyebrow">Inquiry system</span>
+            <h2>Take the next step with us.</h2>
+            <p class="muted">Fill out the inquiry form for application, ministry interest, or partnership concerns. You may also message us on Messenger for faster assistance.</p>
+            <div class="checklist">
+              <div class="check"><b>1</b><div><strong>Complete the form</strong><div class="muted">Share your details and the ministry or program you are interested in.</div></div></div>
+              <div class="check"><b>2</b><div><strong>Wait for follow-up</strong><div class="muted">Our team may contact you through Messenger, SMS, or email.</div></div></div>
+              <div class="check"><b>3</b><div><strong>Prepare for orientation</strong><div class="muted">We will guide you on schedule, documents, and next steps.</div></div></div>
+            </div>
+            <div class="btns">
+              <a class="btn primary" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLScFl2H2ikeeor30bjNc1ox91bhxIFLiYXHHHYsz3Y57YM_xpg/viewform">Open Form in New Tab</a>
+              <a class="btn secondary" target="_blank" rel="noopener" href="https://m.me/cocstcai">Message on Messenger</a>
+            </div>
+          </div>
+          <div class="card story-media fade-up">
+            <img src="Feeding Ministry.png" alt="Christian community service and compassion" />
+          </div>
+        </div>
+        <div class="card form-shell fade-up" style="margin-top:22px">
+          <div class="form-frame">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScFl2H2ikeeor30bjNc1ox91bhxIFLiYXHHHYsz3Y57YM_xpg/viewform?embedded=true" title="COCSTC Inquiry Form" loading="lazy">Loading…</iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-grid">
+        <div class="card contact-card fade-up">
+          <span class="eyebrow">Contact us</span>
+          <h2>Visit, connect, and grow with us.</h2>
+          <p class="muted">We welcome students, families, volunteers, ministry partners, and community members looking for a Christ-centered place to belong and serve.</p>
+          <div class="contact-list">
+            <div class="contact-item"><div>📱</div><div><b>Mobile</b><br><a href="tel:+639977687651">0997 768 7651</a></div></div>
+            <div class="contact-item"><div>✉</div><div><b>Email</b><br><a href="mailto:cocstc16@gmail.com">cocstc16@gmail.com</a></div></div>
+            <div class="contact-item"><div>Ⓕ</div><div><b>Facebook</b><br><a target="_blank" rel="noopener" href="https://www.facebook.com/COCSTCai">facebook.com/COCSTCai</a></div></div>
+            <div class="contact-item"><div>📍</div><div><b>Location</b><br>188 Tester Avenue, Salawag, Dasmariñas, Cavite, Philippines</div></div>
+          </div>
+          <div class="btns">
+            <a class="btn primary" target="_blank" rel="noopener" href="https://maps.app.goo.gl/cSNorzAacinTkUGw7">Open Google Maps</a>
+            <a class="btn secondary" target="_blank" rel="noopener" href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/COCSTCai">Share on Facebook</a>
+          </div>
+        </div>
+        <div class="card map-card fade-up">
+          <iframe title="Community Church of Christ location map" src="https://maps.google.com/maps?q=188%20Tester%20Avenue%20Salawag%20Dasmarinas%20Cavite%20Philippines&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-box">
+      <div>
+        <strong>Community Church of Christ Inc.</strong><br>
+        <span>Romans 16:16 · Christ Mission, My Passion.</span>
+      </div>
+      <div>Designed as a clean, responsive landing page ready for GitHub Pages or static hosting.</div>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <div class="modal-top">
+        <div>
+          <span class="eyebrow">Ministry details</span>
+          <h2 id="modalTitle" style="margin-top:10px"></h2>
+        </div>
+        <button class="close" id="closeModal" aria-label="Close">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="lead" id="modalText"></p>
+        <div class="modal-gallery">
+          <img id="modalImage" src="" alt="Ministry visual" />
+          <div class="caption-list" id="modalCaptions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const ministryData = {
+      academy: {
+        title: 'COCSTC Academy Inc.',
+        text: 'A Christian educational pathway that combines theology, technical-vocational readiness, leadership formation, ROTC-related discipline, and values development for students and future community servants.',
+        image: 'COCSTC Academy.png',
+        captions: [
+          ['Training godly leaders', 'Students and mentors are pictured in a learning environment that reflects discipleship, guidance, and character formation.'],
+          ['Academic and ministry growth', 'Learners are formed not only for academics but also for Christ-centered service, mentorship, and disciplined growth.'],
+          ['Identity and belonging', 'The academy visuals show a strong sense of purpose and belonging within a Christian learning community.']
+        ]
+      },
+      swp: {
+        title: 'Study Work Program',
+        text: 'The SWP combines schooling, technical certificates, theology formation, work exposure, leadership training, church event participation, and community service in one guided journey.',
+        image: 'SWP.png',
+        captions: [
+          ['7-in-1 opportunity', 'The program combines academics, training, service, and employability in one pathway.'],
+          ['Designed for growth', 'Applicants are guided toward both practical livelihood and Christ-centered character development.'],
+          ['Clear next step', 'This ministry opens a direct pathway for inquiry, application, and orientation follow-up.']
+        ]
+      },
+      planting: {
+        title: 'Church Planting',
+        text: 'Church planting extends worship, discipleship, teaching, and pastoral care into new communities. Current ministry presence includes Bongabong in Mindoro Occidental, Amadeo in Cavite, and Bontoc in Mountain Province.',
+        image: 'Church Planting.png',
+        captions: [
+          ['Prayer and planning', 'Leaders meet, pray, and prepare ministry directions for new and growing church communities.'],
+          ['Preaching and teaching', 'The pulpit and teaching scenes reflect faithful proclamation of the Gospel in local mission points.'],
+          ['Home and community outreach', 'Church planting includes visitation, Bible sharing, family ministry, and relationship-building in local communities.']
+        ]
+      },
+      feeding: {
+        title: 'Feeding Ministry',
+        text: 'The feeding ministry meets practical needs with compassion by sharing food, kindness, time, and encouragement in communities where care can be felt and remembered.',
+        image: 'Feeding Ministry.png',
+        captions: [
+          ['Serving with joy', 'Volunteers personally hand food to children and families, reflecting warmth and dignity in ministry.'],
+          ['Organized compassion', 'The outreach setup shows teamwork, preparation, and visible care for the community.'],
+          ['Faith in action', 'This ministry shows that Christian love is both preached and practiced in tangible ways.']
+        ]
+      },
+      jail: {
+        title: 'Prison (Jail) Ministry',
+        text: 'This ministry brings spiritual encouragement, prayer, discipleship, and practical support to people who need hope, direction, and a reminder that restoration is possible in Christ.',
+        image: 'Prison (Jail) ministry.png',
+        captions: [
+          ['Presence inside difficult places', 'The ministry enters correctional spaces with compassion, respect, and a message of hope.'],
+          ['Fellowship and encouragement', 'Teaching, visitation, and shared moments of care help affirm dignity and spiritual renewal.'],
+          ['Restoration through Christ', 'The goal is not only relief but renewal, discipleship, and a path toward transformed living.']
+        ]
+      },
+      riders: {
+        title: 'Christian Riders Ministry',
+        text: 'The Riders Ministry gathers motorcycle riders for Christian fellowship, road-based outreach, community visibility, charity rides, and practical acts of service.',
+        image: 'Christian Riders  ministry (1).png',
+        captions: [
+          ['Christian riders in fellowship', 'The collage shows riders gathered together in unity, carrying both identity and mission on the road.'],
+          ['Visible witness', 'Uniforms, logos, and group presence help represent Christian values with discipline, goodwill, and approachability.'],
+          ['Service-oriented mobility', 'This ministry reaches communities for visitation, events, support activities, and faith-based outreach.']
+        ]
+      },
+      rehab: {
+        title: 'Rehabilitation Ministry',
+        text: 'The rehabilitation ministry supports people facing addiction and behavioral struggles through guidance, accountability, spiritual growth sessions, prayer, and long-term Christ-centered restoration.',
+        image: 'Rehabilitation Ministry through Spiritual growth sessions.png',
+        captions: [
+          ['Bible-based growth sessions', 'Participants gather in focused study and discipleship sessions that nurture inner renewal and direction.'],
+          ['Structured restoration', 'The ministry creates a guided environment for accountability, healing, and healthy daily discipline.'],
+          ['Hope for lasting change', 'Christ-centered teaching and caring relationships help people move toward renewed purpose and restored living.']
+        ]
+      }
+    };
+
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalText = document.getElementById('modalText');
+    const modalImage = document.getElementById('modalImage');
+    const modalCaptions = document.getElementById('modalCaptions');
+
+    document.querySelectorAll('[data-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = ministryData[btn.dataset.modal];
+        if (!item) return;
+        modalTitle.textContent = item.title;
+        modalText.textContent = item.text;
+        modalImage.src = item.image;
+        modalImage.alt = item.title;
+        modalCaptions.innerHTML = item.captions.map(([title, text]) => `
+          <div class="caption"><strong>${title}</strong><div class="muted">${text}</div></div>
+        `).join('');
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+    const dots = document.querySelectorAll('[data-scroll-card]');
+    const cards = document.querySelectorAll('.ministry-card');
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = Number(dot.dataset.scrollCard || 0);
+        const target = cards[idx];
+        if (!target) return;
+        target.scrollIntoView({behavior:'smooth', block:'nearest', inline:'center'});
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+
+    const ministryObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const visibleIndex = [...cards].indexOf(entry.target);
+          let dotIndex = visibleIndex >= 6 ? 2 : visibleIndex >= 3 ? 1 : 0;
+          dots.forEach(d => d.classList.remove('active'));
+          if (dots[dotIndex]) dots[dotIndex].classList.add('active');
+        }
+      });
+    }, {threshold:0.55});
+    cards.forEach(card => ministryObserver.observe(card));
+
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const sections = navLinks.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = navLinks.find(a => a.getAttribute('href') === id);
+        if (entry.isIntersecting && link) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -45% 0px', threshold: 0 });
+    sections.forEach(sec => navObserver.observe(sec));
+  </script>
+</body>
+</html>
